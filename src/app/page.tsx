@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 // Navigation Component
 function Navigation() {
