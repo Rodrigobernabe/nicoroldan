@@ -1,21 +1,18 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  output: "standalone",
+  output: "export",
+  basePath: isProd ? "/nicoroldan" : "",
+  images: {
+    unoptimized: true,
+  },
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },
   reactStrictMode: false,
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
-        pathname: '/**',
-      },
-    ],
-  },
 };
 
 export default nextConfig;
