@@ -55,15 +55,6 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          # Automatically inject basePath in your Next.js config file, and enable
-          # static export mode.
-          #
-          # When using the `static` export, you typically want to set `output: 'export'`
-          # and ensure you have an `unoptimized: true` image configuration.
-          #
-          # This step will automatically disable the static export mode inject if it's already there.
-          static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
